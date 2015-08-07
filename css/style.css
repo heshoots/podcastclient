@@ -1,0 +1,318 @@
+nobr, p {
+  font-family: calibri;
+}
+
+.content {
+  background-color: #0F0F0F;
+  position: relative;
+  float: left;
+  width: 400px;
+  height: 470px;
+}
+
+/*---- Title CSS  -----*/
+
+.titleLeft {
+  float: left;
+}
+
+#titleLeft {
+  -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+  height: 54px;
+  width: -54px;
+}
+
+#addfeed {
+ padding-left: 20px;
+ color: white;
+}
+
+#feeddrawer {
+  position: absolute;
+  width: 398px;
+  height: 50px;
+  top: 70px;
+  background-color: #1f1f1f;
+
+  -webkit-border-bottom-right-radius: 15px;
+-webkit-border-bottom-left-radius: 15px;
+-moz-border-radius-bottomright: 15px;
+-moz-border-radius-bottomleft: 15px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+    border: 1px solid #2F2F2F;
+    border-top: 0px;
+}
+
+.titleRight {
+  float: right;
+}
+
+#titleRight {
+  -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+  height: 54px;
+  width: -54px;
+}
+
+.title {
+  background-color: #1F1F1f;
+  height: 70px;
+}
+
+/*--- podfeed ---*/
+
+body {
+
+}
+
+#addfeed, #closefeed {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+}
+.addfeed, .closefeed {
+  background: url('http://i.imgur.com/TrJk5Vh.png')
+}
+
+#buttonRight {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: right;
+  outline: none;
+}
+
+.moveRight {
+  background: url('http://i.imgur.com/QlN8IDm.png');
+}
+
+
+.podcasts {
+  width: 400px;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.small-cover {
+  width: 75px;
+  height: 75px
+}
+
+.podcastInfo {
+  margin: 5px;
+  padding:0px;
+  color: #808080;
+}
+
+.podcast {
+  width: 380px;
+  height: 75px;
+  background: rgba(20, 20, 20, 1);
+  border-bottom: 1px solid #2F2F2F;
+  border-top: 1px solid #2F2F2F;
+}
+
+.castinformation {
+  float:right;
+  height: 55px;
+  width: 280px;
+  padding: 10px;
+}
+
+
+.coverholder {
+  width: 75px;
+  height: 75px;
+  margin:0px;
+}
+
+/* ---- player css ----*/
+
+body {
+  margin: 0px;
+}
+
+#cover {
+  width: 400px;
+  height: 400px;
+}
+
+.moveLeft {
+  background: url('http://i.imgur.com/hLsfnQI.png');
+}
+
+#buttonLeft {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+}
+
+
+/*---- information css ----*/
+
+.information {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  height: 85px;
+  width: 400px;
+  top: 385px;
+  border: 20px;
+}
+
+#currenttime {
+  color: grey;
+  padding-left: 10px;
+}
+
+#totaltime {
+  color: grey;
+  float: right;
+  padding-right: 10px;
+}
+
+.podtitle {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding-top: 10px;
+  border: 0px;
+}
+
+.feedtitle {
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+/*------controls css ------*/
+
+#controls {
+  background-color: #0F0F0F;
+  position: absolute;
+  top: 470px;
+  left: 0px;
+  width: 400px;
+  height: 75px;
+}
+
+.player {
+  background-color: #1F1F1F;
+  margin-top: -5px;
+  height: 70px;
+}
+
+#audioplayer {}
+
+#timeline {
+  width: 400px;
+  height: 17px;
+  float: left;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .1);
+  margin-top: 0px;
+}
+
+#playhead {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(3, 123, 255, 1);
+}
+
+.nextpod {
+  background: url('http://i.imgur.com/d4SeZph.png');
+
+}
+
+#nextpod {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+  filter: invert(0%);
+  margin-left: 40px;
+}
+
+.seekbackwards {
+  background: url('http://i.imgur.com/odCINSV.png');
+}
+
+#seekbackwards {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+  margin-left: 20px;
+}
+
+.seekforwards {
+  background: url('http://i.imgur.com/PY66SW7.png');
+}
+
+#seekforwards {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+    margin-left: 40px;
+}
+
+.play {
+  background: url('http://i.imgur.com/BuZrrUd.png');
+}
+
+
+
+#pButton {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+    margin-left: 40px;
+}
+
+.pause {
+  background: url('http://i.imgur.com/W99nsj7.png');
+}
