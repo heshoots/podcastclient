@@ -25,7 +25,7 @@ app.on('open-url', function(url) {
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 630, height: 800, "auto-hide-menu-bar": true, resizable: false});
+  mainWindow = new BrowserWindow({width: 416, height: 586, "auto-hide-menu-bar": true, resizable: true});
 
   // and load the index.html of the app.
   mainWindow.loadUrl('file://' + __dirname + '/index.html');

@@ -1,5 +1,5 @@
 var onplayhead, followtime, controls, music, totalTime,
-sBack, pButton, sForwards, nButton, playhead, timeline, timelineWidth;
+sBack, pButton, sForwards, nButton, playhead, timeline, timelineWidth, newFeed;
 
 // returns click as decimal (.77) of the total timelineWidth
 function clickPercent(e) {
@@ -146,6 +146,8 @@ window.onload = function() {
   nButton = document.getElementById('nextpod'); //next button
   playhead = document.getElementById('playhead'); // playhead
   timeline = document.getElementById('timeline'); // timeline
+  newFeed = document.getElementById('')
+
   // timeline width adjusted for playhead
   timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
   // timeupdate event listener
@@ -168,5 +170,6 @@ window.onload = function() {
   music.addEventListener("canplaythrough", function() {
     duration = music.duration;
   }, false);
+
 
 }

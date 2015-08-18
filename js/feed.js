@@ -1,7 +1,9 @@
-var FeedParser = require('feedparser')
-  , request = require('request');
-
+var feedlist = {prevnum: 0, list: []}
 var feedsleft = 0;
+var FeedParser = require('feedparser')
+  , request = require('request')
+  , fs = require('fs');
+
 function playpodcast(podnum) {
     podcast = feedlist.list[podnum];
     document.getElementById("cover").src = podcast.img;
@@ -24,10 +26,27 @@ function createPodcastInFeed(container, feedobject) {
   container.appendChild(div);
 }
 
+function getFeedList(feedPath) {
+  fs.readFile(feedPath, 'utf8', function (err, data) {
+      if (err) throw err;
+      return data;
+  });
+}
+
+function addFeedToList(url) {
+  feeds = getFeedList("./feeds.json");
+  console.log(feeds);
+  feeds.push(url);
+  fs.writeFile ("./feeds.json", JSON.stringify(feeds), function(err) {
+    if (err) throw err;
+    console.log("complete");
+  });
+}
+
 function addfeed() {
   text = document.getElementsByName("url")[0];
-  parseFeed(text.value);
-  text.value = "";
+  addFeedToList(text.value);
+  text.value = ""
 }
 
 function getCastInformation(feedobject) {
@@ -48,7 +67,6 @@ function getPodcastInfo(infostring) {
 function domelemstr(item) {
   return "<div class=\"podcast\" onclick=\"playpodcast('" + feedlist.prevnum + "')\">" + item.title + "</div>"
 }
-var feedlist = {prevnum: 0, list: []}
 
 function parseFeed(url) {
   var req = request(url)
