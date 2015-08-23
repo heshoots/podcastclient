@@ -1,5 +1,9 @@
 var onplayhead, followtime, controls, music, totalTime,
-sBack, pButton, sForwards, nButton, playhead, timeline, timelineWidth, newFeed;
+sBack, pButton, sForwards, nButton, playhead, timeline, timelineWidth, newFeed,
+sAddFeed;
+var Podcasts = require("./js/Podcasts.js");
+var model = new Podcasts();
+
 
 // returns click as decimal (.77) of the total timelineWidth
 function clickPercent(e) {
@@ -13,10 +17,6 @@ function mouseDown() {
   music.removeEventListener('timeupdate', timeUpdate, false);
 }
 
-function changeSong(url) {
-  music.src = url;
-}
-
 // mouseUp EventListener
 // getting input from all mouse clicks
 function mouseUp(e) {
@@ -28,7 +28,7 @@ function mouseUp(e) {
       music.addEventListener('timeupdate', timeUpdate, false);
     }
     onplayhead = false;
-  }
+}
   // mousemove EventListener
   // Moves playhead as user drags
 function moveplayhead(e) {
@@ -42,6 +42,8 @@ function moveplayhead(e) {
   if (newMargLeft > timelineWidth) {
     playhead.style.marginLeft = timelineWidth + "px";
   }
+  music.currentTime = duration * clickPercent(e);
+  followtime.innerHTML = getTimeText(music.currentTime);
 }
 
 // timeUpdate
@@ -52,8 +54,7 @@ function timeUpdate() {
   totaltime.innerHTML = getTimeText(music.duration)
   playhead.style.marginLeft = playPercent + "px";
   if (music.currentTime == duration) {
-    pButton.className = "";
-    pButton.className = "play";
+    nextpod();
   }
 }
 
@@ -63,6 +64,25 @@ function seekback() {
 
 function seekforward() {
   music.currentTime += 30;
+}
+
+function nextpod() {
+  model.play(model.playing + 1)
+}
+
+function addFeed() {
+  console.log("addfeed");
+  text = document.getElementsByName("url")[0];
+  model.add(text.value);
+  text.value = "";
+}
+
+function display() {
+  var button = document.getElementById("displaybutton");
+  var container = document.getElementById("podcasts");
+  container.removeChild(button);
+  model.sort();
+  model.displayFeed();
 }
 
 //Play and Pause
@@ -108,7 +128,6 @@ $(document).ready(function() {
     $('#podplayer').show();
   });
 
-
 });
 
 
@@ -136,7 +155,8 @@ function leadingZero(num) {
 }
 
 window.onload = function() {
-  followtime = document.getElementById('currenttime')
+  podplayer = document.getElementById('podplayer');
+  followtime = document.getElementById('currenttime');
   controls = document.getElementById('controls')
   music = document.getElementById('music'); // id for audio element
   totalTime = document.getElementById('totaltime');
@@ -146,12 +166,18 @@ window.onload = function() {
   nButton = document.getElementById('nextpod'); //next button
   playhead = document.getElementById('playhead'); // playhead
   timeline = document.getElementById('timeline'); // timeline
-  newFeed = document.getElementById('')
+  sAddFeed = document.getElementById('submitAddFeed');
+  //newFeed = document.getElementById('')
 
   // timeline width adjusted for playhead
   timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
   // timeupdate event listener
   music.addEventListener("timeupdate", timeUpdate, false);
+  sBack.addEventListener("click", seekback, false);
+  pButton.addEventListener("click", play, false);
+  sForwards.addEventListener("click", seekforward, false);
+  nButton.addEventListener("click", nextpod, false);
+  sAddFeed.addEventListener("click", addFeed, false);
 
   //Makes timeline clickable
   timeline.addEventListener("click", function(event) {
@@ -170,6 +196,4 @@ window.onload = function() {
   music.addEventListener("canplaythrough", function() {
     duration = music.duration;
   }, false);
-
-
 }

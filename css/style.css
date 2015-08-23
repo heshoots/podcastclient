@@ -176,7 +176,7 @@ body {
 
 .information {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
   height: 85px;
   width: 400px;
   top: 385px;
@@ -184,30 +184,42 @@ body {
 }
 
 #currenttime {
+  position: absolute;
+  top: 65px;
   color: grey;
   padding-left: 10px;
 }
 
 #totaltime {
+  position: absolute;
   color: grey;
   float: right;
-  padding-right: 10px;
+  top: 65px;
+  right: 10px;
 }
 
-.podtitle {
-  color: white;
+#podtitle {
+  color: grey;
   text-align: center;
-  margin: 0px;
-  padding-top: 10px;
-  border: 0px;
+  margin: 8px;
 }
 
-.feedtitle {
-  color: white;
+#feedtitle {
+  color: grey;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 0px;
+  margin: 8px;
+}
+
+.floating {
+  display: table;
+  padding-top: 13px;
+  /*float: left;*/
+  width: 400px;
+}
+.floating p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 
 /*------controls css ------*/
