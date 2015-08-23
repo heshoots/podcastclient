@@ -1,0 +1,86 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose readDependencies loading dependencies from C:\Users\maxpr\Documents\podcasts\package.json
+5 warn package.json podcastapp@0.0.2 No description
+6 warn package.json podcastapp@0.0.2 No repository field.
+7 warn package.json podcastapp@0.0.2 No README data
+8 warn package.json podcastapp@0.0.2 No license field.
+9 verbose install where, deps [ 'C:\\Users\\maxpr\\Documents\\podcasts',
+9 verbose install   [ 'electron-rebuild', 'feedparser', 'fs', 'request', 'valid-url' ] ]
+10 verbose install where, peers [ 'C:\\Users\\maxpr\\Documents\\podcasts', [] ]
+11 verbose installManyTop reading for lifecycle C:\Users\maxpr\Documents\podcasts\package.json
+12 info preinstall podcastapp@0.0.2
+13 verbose installManyTop reading scoped package data from C:\Users\maxpr\Documents\podcasts\node_modules\electron-prebuilt\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\maxpr\Documents\podcasts\node_modules\electron-rebuild\package.json
+15 verbose installManyTop reading scoped package data from C:\Users\maxpr\Documents\podcasts\node_modules\feedparser\package.json
+16 verbose installManyTop reading scoped package data from C:\Users\maxpr\Documents\podcasts\node_modules\fs\package.json
+17 verbose installManyTop reading scoped package data from C:\Users\maxpr\Documents\podcasts\node_modules\request\package.json
+18 verbose installManyTop reading scoped package data from C:\Users\maxpr\Documents\podcasts\node_modules\valid-url\package.json
+19 info package.json fs@0.0.2 fs is also the name of a node core module.
+20 info package.json fs@0.0.2 No description
+21 info package.json fs@0.0.2 No repository field.
+22 info package.json fs@0.0.2 No README data
+23 info package.json valid-url@1.0.9 No license field.
+24 verbose readDependencies loading dependencies from C:\Users\maxpr\Documents\podcasts\package.json
+25 verbose targetResolver reading package data from C:\Users\maxpr\Documents\podcasts\node_modules\electron-prebuilt\package.json
+26 verbose targetResolver reading package data from C:\Users\maxpr\Documents\podcasts\node_modules\electron-rebuild\package.json
+27 verbose targetResolver reading package data from C:\Users\maxpr\Documents\podcasts\node_modules\feedparser\package.json
+28 verbose targetResolver reading package data from C:\Users\maxpr\Documents\podcasts\node_modules\fs\package.json
+29 verbose targetResolver reading package data from C:\Users\maxpr\Documents\podcasts\node_modules\request\package.json
+30 verbose targetResolver reading package data from C:\Users\maxpr\Documents\podcasts\node_modules\valid-url\package.json
+31 verbose targetResolver reading package data from C:\Users\maxpr\Documents\podcasts\node_modules\.bin\electron-rebuild\package.json
+32 verbose targetResolver reading package data from C:\Users\maxpr\Documents\podcasts\node_modules\.bin\electron-rebuild.cmd\package.json
+33 verbose targetResolver reading package data from C:\Users\maxpr\Documents\podcasts\node_modules\.bin\my-app\package.json
+34 verbose already installed skipping electron-rebuild@^0.2.5 C:\Users\maxpr\Documents\podcasts
+35 verbose already installed skipping feedparser@1.1.3 C:\Users\maxpr\Documents\podcasts
+36 verbose already installed skipping fs@0.0.2 C:\Users\maxpr\Documents\podcasts
+37 verbose already installed skipping request@2.60.0 C:\Users\maxpr\Documents\podcasts
+38 verbose already installed skipping valid-url@1.0.9 C:\Users\maxpr\Documents\podcasts
+39 silly install resolved []
+40 info build C:\Users\maxpr\Documents\podcasts
+41 info linkStuff podcastapp@0.0.2
+42 silly linkStuff podcastapp@0.0.2 has C:\Users\maxpr\Documents as its parent node_modules
+43 verbose linkBins podcastapp@0.0.2
+44 verbose linkMans podcastapp@0.0.2
+45 verbose rebuildBundles podcastapp@0.0.2
+46 verbose rebuildBundles [ '.bin',
+46 verbose rebuildBundles   'electron-prebuilt',
+46 verbose rebuildBundles   'electron-rebuild',
+46 verbose rebuildBundles   'feedparser',
+46 verbose rebuildBundles   'fs',
+46 verbose rebuildBundles   'request',
+46 verbose rebuildBundles   'valid-url' ]
+47 verbose rebuild bundle C:\Users\maxpr\Documents\podcasts\node_modules\electron-prebuilt
+48 info install podcastapp@0.0.2
+49 verbose unsafe-perm in lifecycle true
+50 info podcastapp@0.0.2 Failed to exec install script
+51 verbose stack Error: podcastapp@0.0.2 install: `electron-rebuild`
+51 verbose stack Exit status 4294967295
+51 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+51 verbose stack     at EventEmitter.emit (events.js:110:17)
+51 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+51 verbose stack     at ChildProcess.emit (events.js:110:17)
+51 verbose stack     at maybeClose (child_process.js:1015:16)
+51 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+52 verbose pkgid podcastapp@0.0.2
+53 verbose cwd C:\Users\maxpr\Documents\podcasts
+54 error Windows_NT 6.3.9600
+55 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+56 error node v0.12.7
+57 error npm  v2.11.3
+58 error code ELIFECYCLE
+59 error podcastapp@0.0.2 install: `electron-rebuild`
+59 error Exit status 4294967295
+60 error Failed at the podcastapp@0.0.2 install script 'electron-rebuild'.
+60 error This is most likely a problem with the podcastapp package,
+60 error not with npm itself.
+60 error Tell the author that this fails on your system:
+60 error     electron-rebuild
+60 error You can get their info via:
+60 error     npm owner ls podcastapp
+60 error There is likely additional logging output above.
+61 verbose exit [ 1, true ]
