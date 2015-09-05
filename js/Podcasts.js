@@ -135,6 +135,7 @@ function playpodcast(podnum) {
     document.getElementById("feedtitle").innerHTML = podcast.author;
     music.src = podcast.guid;
     play();
+    showElementById("buttonRight");
 }
 
 function Podcasts() {

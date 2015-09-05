@@ -4,61 +4,57 @@
     <meta charset="UTF-8">
     <title>Podcast Player</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
   </head>
 
   <body>
 
     <div class="content" id="feed">
-  <div class="title">
-    <button id="addfeed" class="addfeed"></button>
-    <button id="closefeed" class="closefeed"></button>
-    <div id="feeddrawer">
-        Feed url:
-        <input type="text" name="url">
-        <button id="submitAddFeed">Add Feed!</button>
+      <div class="title">
+        <button id="addfeed" class="addfeed"></button>
+        <button id="closefeed" class="closefeed"></button>
+        <div id="feeddrawer">
+          Feed url:
+          <input type="text" name="url">
+          <button id="submitAddFeed">Add Feed!</button>
+        </div>
+        <button id="buttonRight" class="moveRight"></button>
+      </div>
+      <div class="podcasts" id="podcasts">
+        <div class="podcast" id="displaybutton">
+          <img src="./ajax_loader_vector.gif" style="width: 50px; height: 50px; position: absolute; left: 165px; top: 80px;"></img>
+        </div>
+      </div>
     </div>
-    <button id="buttonRight" class="moveRight"></button>
-  </div>
-  <div class="podcasts" id="podcasts">
-    <div class="podcast" id="displaybutton">
-      FEEDS REFRESHING
+
+
+    <div class="content" id="podplayer">
+      <div class="title">
+        <button id="buttonLeft" class="moveLeft"></button>
+      </div>
+      <img id="cover" src="">
+      <div class="information">
+        <p id="podtitle"></p>
+        <p id="feedtitle"></p>
+        <nobr id="currenttime"></nobr>
+        <nobr id="totaltime"></nobr>
+      </div>
     </div>
+
+    <audio id="music" preload="true"></audio>
+
+    <div id="controls">
+      <div id="timeline">
+        <div id="playhead"></div>
+      </div>
+
+      <div id="audioplayer">
+        <button id="seekbackwards" class="seekbackwards"></button>
+        <button id="pButton" class="play"></button>
+        <button id="seekforwards" class="seekforwards"></button>
+        <button id="nextpod" class="nextpod"></button>
+      </div>
   </div>
 
-  </div>
-</div>
-
-<div class="content" id="podplayer">
-  <div class="title">
-    <button id="buttonLeft" class="moveLeft"></button>
-  </div>
-  <img id="cover" src="">
-  <div class="information">
-    <p id="podtitle"></p>
-    <p id="feedtitle"></p>
-    <nobr id="currenttime"></nobr>
-    <nobr id="totaltime"></nobr>
-  </div>
-</div>
-
-<audio id="music" preload="true">
-</audio>
-
-<div id="controls">
-  <div id="timeline">
-    <div id="playhead"></div>
-  </div>
-
-  <div id="audioplayer">
-    <button id="seekbackwards" class="seekbackwards"></button>
-    <button id="pButton" class="play"></button>
-    <button id="seekforwards" class="seekforwards"></button>
-    <button id="nextpod" class="nextpod"></button>
-  </div>
-</div>
-
-</body>
+  </body>
 </html>

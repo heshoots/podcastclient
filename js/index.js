@@ -3,6 +3,7 @@ sBack, pButton, sForwards, nButton, playhead, timeline, timelineWidth, newFeed,
 sAddFeed;
 var Podcasts = require("./js/Podcasts.js");
 var model = new Podcasts();
+var played = false;
 
 
 // returns click as decimal (.77) of the total timelineWidth
@@ -85,6 +86,14 @@ function display() {
   model.displayFeed();
 }
 
+function hideElementById(id) {
+  (document.getElementById(id)).setAttribute("style", "display:none");
+}
+
+function showElementById(id) {
+  (document.getElementById(id)).setAttribute("style", "display: block");
+}
+
 //Play and Pause
 function play() {
   // start music
@@ -101,34 +110,6 @@ function play() {
   }
 }
 
-$(document).ready(function() {
-  $("#podplayer").hide();
-  $("#feeddrawer").hide();
-  $("#closefeed").hide();
-
-  $(".addfeed").click(function() {
-    $("#addfeed").hide();
-    $("#closefeed").show();
-    $("#feeddrawer").show();
-  })
-
-  $(".closefeed").click(function() {
-    $("#closefeed").hide();
-    $("#addfeed").show();
-    $("#feeddrawer").hide();
-  })
-
-  $("#buttonLeft").click(function() {
-    $('#podplayer').hide();
-    $('#feed').show();
-  })
-
-  $("#buttonRight").click(function() {
-    $('#feed').hide();
-    $('#podplayer').show();
-  });
-
-});
 
 
 function getTimeText(timeinseconds) {
@@ -163,6 +144,33 @@ window.onload = function() {
   timeline = document.getElementById('timeline'); // timeline
   sAddFeed = document.getElementById('submitAddFeed');
   //newFeed = document.getElementById('')
+  hideElementById("podplayer");
+  hideElementById("feeddrawer");
+  hideElementById("closefeed");
+  hideElementById("buttonRight");
+
+  document.getElementById("addfeed").onclick = function() {
+    hideElementById("addfeed");
+    showElementById("closefeed");
+    showElementById("feeddrawer");
+  }
+
+  document.getElementById("closefeed").onclick = function() {
+    showElementById("addfeed");
+    hideElementById("closefeed");
+    hideElementById("feeddrawer");
+  }
+
+  document.getElementById('buttonLeft').onclick = function() {
+    hideElementById("podplayer");
+    showElementById("feed");
+  }
+
+  document.getElementById('buttonRight').onclick = function() {
+    showElementById("podplayer");
+    hideElementById("feed");
+  }
+
 
   // timeline width adjusted for playhead
   timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
