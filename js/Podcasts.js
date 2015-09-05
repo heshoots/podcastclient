@@ -54,13 +54,6 @@ Podcasts.prototype.retrievePodcasts = function(url) {
 
 
     while (item = stream.read()) {
-      var feedobject = {
-          url: item.link,
-          author: item.author,
-          img: meta.image.url,
-          title: item.title,
-          date: item.pubdate,
-      }
       self.feed.push(item)
     }
   });
@@ -140,7 +133,8 @@ function playpodcast(podnum) {
     document.getElementById("cover").src = podcast.meta.image.url;
     document.getElementById("podtitle").innerHTML = podcast.title;
     document.getElementById("feedtitle").innerHTML = podcast.author;
-    playpod(podcast.guid);
+    music.src = podcast.guid;
+    play();
 }
 
 function Podcasts() {

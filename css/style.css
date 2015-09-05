@@ -72,7 +72,9 @@ border-bottom-left-radius: 15px;
 /*--- podfeed ---*/
 
 body {
-
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 #addfeed, #closefeed {
