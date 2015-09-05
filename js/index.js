@@ -142,11 +142,6 @@ function getTimeText(timeinseconds) {
   }
 }
 
-function playpod(url) {
-  music.src = url;
-  play();
-}
-
 function leadingZero(num) {
   num = num.toFixed()
   if (num < 10) {

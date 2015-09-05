@@ -34,19 +34,19 @@ nobr, p {
 
 #feeddrawer {
   position: absolute;
-  width: 398px;
-  height: 50px;
+  width: 400px;
+  height: 30px;
   top: 70px;
   background-color: #1f1f1f;
-
   -webkit-border-bottom-right-radius: 15px;
--webkit-border-bottom-left-radius: 15px;
--moz-border-radius-bottomright: 15px;
--moz-border-radius-bottomleft: 15px;
-border-bottom-right-radius: 15px;
-border-bottom-left-radius: 15px;
-    border: 1px solid #2F2F2F;
-    border-top: 0px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 1px solid #2F2F2F;
+  border-top: 0px;
+  color: #808080
 }
 
 .titleRight {
@@ -115,6 +115,7 @@ body {
 }
 
 .small-cover {
+  float: left;
   width: 75px;
   height: 75px
 }
@@ -126,7 +127,7 @@ body {
 }
 
 .podcast {
-  width: 380px;
+  width: 400px;
   height: 75px;
   background: rgba(20, 20, 20, 1);
   border-bottom: 1px solid #2F2F2F;
@@ -134,10 +135,10 @@ body {
 }
 
 .castinformation {
-  float:right;
+  float: left;
   height: 55px;
   width: 280px;
-  padding: 10px;
+  padding: 5px;
 }
 
 
